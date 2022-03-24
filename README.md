@@ -10,7 +10,7 @@
 
 ## Features 
  - [x] Change font and color
- - [x] Localstorage
+ - [x] Local storage o
  - [x] Upload Background 
  - [x] Export Data from Excel File 
  - [x] Orbit and transform control 
