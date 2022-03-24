@@ -16,3 +16,6 @@
  - [x] Orbit and transform control 
  - [x] Preview of generated Attestations
  - [x] Download Attestations as pdf file 
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
