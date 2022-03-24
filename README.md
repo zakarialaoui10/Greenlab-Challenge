@@ -9,7 +9,6 @@
 
 
 ## Features 
- - Localstorage
- - Export data from excel file
- - 
+ - [x] Localstorage
+ - [x] Export Data from Excel File
 
