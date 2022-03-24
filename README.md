@@ -9,6 +9,10 @@
 
 
 ## Features 
+ - [x] Change font and color
  - [x] Localstorage
- - [x] Export Data from Excel File
-
+ - [x] Upload Background 
+ - [x] Export Data from Excel File 
+ - [x] Orbit and transform control 
+ - [x] Preview of generated Attestations
+ - [x] Download Attestations as pdf file 
