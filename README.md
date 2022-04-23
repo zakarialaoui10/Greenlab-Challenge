@@ -17,7 +17,7 @@
  - [x] Preview of generated Attestations
  - [x] Download Attestations as pdf file 
 
-## help
+## Index
 <table>
  <tr>
   <td><img src="public/assets/refresh.png" width="30px"></td>
@@ -29,7 +29,7 @@
  </tr>
  <tr>
   <td><img src="public/assets/help.png" width="30px"></td>
-  <td></td>
+  <td>help</td>
  </tr>
  <tr>
   <td><img src="public/assets/dark.png" width="30px"></td>
