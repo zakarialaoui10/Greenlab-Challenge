@@ -20,7 +20,7 @@
 ## help
 <table>
  <tr>
-  <td></td>
+  <td><img src="public/assets/refresh.png" width="50px"></td>
   <td></td>
  </tr>
 </table>
