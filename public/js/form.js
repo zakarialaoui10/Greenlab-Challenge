@@ -47,8 +47,7 @@ var stylesConfig=new Array(5).fill(null).map((n,i)=>
     text("font family"),
     inputColor().width("40px").setValue(getStyle(i).color),
     inputNumber().width("80px").setValue(getStyle(i).fontSize),
-    //input().width("80px").setValue(getStyle(i).fontFamily).linkList(datalist("Arial","Verdana","Helvetica","Tahoma","Trebuchet MS","Times New Roman","Georgia","Garamond","Courier New","Brush Swcript MT"))
-    select("Arial","Verdana","Helvetica","Tahoma","Trebuchet MS","Times New Roman","Georgia","Garamond","Courier New","Brush Swcript MT").setSelectedValue(getStyle(i).fontSize).width("80px")
+    select("Arial","Verdana","Helvetica","Tahoma","Trebuchet MS","Times New Roman","Georgia","Garamond","Courier New","Brush Swcript MT").setSelectedValue(getStyle(i).fontFamily).width("80px")
 
     ).columns(3).size("250px","auto").spaceAround(1,1).padding("5px").fontSize("1rem").border("none"))
 stylesConfig.map((n,i)=>{
@@ -57,7 +56,7 @@ stylesConfig.map((n,i)=>{
         txt[i].color(n.items[3].value)
     });
     n.items[4].oninput(()=>{
-        setStyle(i,{fontSize:n.items[4].value}) 
+        setStyle(i,{fontSize:n.items[4].value+""}) 
         txt[i].style({fontSize:n.items[4].value+"px"})  
     });
     n.items[5].onchange(()=>{

@@ -15,7 +15,9 @@ export var position=[
     [0,-120,0],
 ]    
 if(!localStorage.getItem("styles"))localStorage.setItem("styles",JSON.stringify(styles));
+else styles=JSON.parse(localStorage.getItem("styles"))
 if(!localStorage.getItem("position"))localStorage.setItem("position",JSON.stringify(position));
+else position=JSON.parse(localStorage.getItem("position"))
 export var setStyle=(i,newConfig)=>{
     styles[i]=Object.assign(getStyle(i),newConfig)
     localStorage.setItem("styles",JSON.stringify(styles))
@@ -31,7 +33,7 @@ export var getPosition=(i)=>{
     return JSON.parse(localStorage.getItem("position"))[i]
 }
 export var resetAll=()=>{
-    //localStorage.removeItem("position");
-    //localStorage.removeItem("styles");
+    localStorage.removeItem("position");
+    localStorage.removeItem("styles");
     location.reload()
 }

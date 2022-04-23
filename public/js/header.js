@@ -7,7 +7,7 @@ var modeImage=image("./assets/dark.png","auto","100%").border("none").cursor("po
 var logo=image("./assets/logo.png","auto","100%").border("none")
 var refresh=image("./assets/refresh.png","auto","100%").border("none").cursor("pointer").click(()=>location.reload())
 var refreshSetting=image("./assets/clear.png","auto","100%").border("none").cursor("pointer").click(()=>resetAll())
-var help=image("./assets/help.png","auto","100%").border("none").link("https://github.com/zakarialaoui10/Greenlab-Challenge")
+var help=image("./assets/help.png","auto","100%").border("none").link("https://github.com/zakarialaoui10/Greenlab-Challenge","_blank")
 var header=Header(
     Flex(
         logo,

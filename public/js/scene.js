@@ -6,7 +6,6 @@ import {setStyle,getStyle,setPosition,getPosition} from "./db.js"
 import {Galerie,GridPreview} from "./preview.js"
 txt[5]=image("./assets/icon.png","50px").border("none");
 txt[6]=image("./assets/logoBlack.png","100px").border("none")
-//var {setStyle,getStyle,setPosition,getPosition}=db;
 var scene=Css3D("1170px","827px").style({minHeight:"70vh",zIndex:2}).margin("10px auto").orbitOn().background("#ddd").border("1px solid black").style({
 	boxShadow:"1px 1px 5px white,-1px -1px 10px black"
 })
@@ -20,6 +19,9 @@ t[6]=scene.addCss(txt[6]).position(...getPosition(6))
 
 txt.map((n,i)=>n.mousedown(()=>{
   scene.setTransform(t[i]);
+}))
+txt.map((n,i)=>n.mouseup(()=>{
+  saveTransform()
 }))
 scene.addGl(gridH(1000,100).rotX(PI/2))
 var saveTransform=()=>t.map((n,i)=>setPosition(i,Object.values(n.mesh.position)))
@@ -61,12 +63,6 @@ htmlToImage.toPng(node)
     const pdfo = new File([doc.output("blob")],names[i]+".pdf", {
       type: "application/pdf",
   });
-  
-  console.log(pdfo);
-  var a=document.createElement("a");
-  a.innerHTML=names[i];
-  a.href=pdfo;
-  document.body.appendChild(a)
   })
   .catch(function (error) {
     console.error('oops, something went wrong!', error);
@@ -102,9 +98,7 @@ async function handleFileAsync(e) {
   }
 
 ExcelHandler.onchange((e)=>handleFileAsync(e).then(()=>{
-  //saveTransform()
-   //console.log("done")
-   //names=[];
+  saveTransform()
    id=[];
    save=[];
    pdfs=[];
