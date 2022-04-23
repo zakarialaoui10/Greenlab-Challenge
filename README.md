@@ -10,7 +10,8 @@
 
 ## Features 
  - [x] Change font family & size and color
- - [x] Local storage 
+ - [X] Toggle Dark/Light Mode
+ - [x] store settings in Local storage (styles & positions)
  - [x] Upload Background 
  - [x] Export Data from Excel File 
  - [x] Orbit and transform control 
