@@ -21,11 +21,11 @@
 <table>
  <tr>
   <td><img src="public/assets/refresh.png" width="30px"></td>
-  <td></td>
+  <td>Refresh</td>
  </tr>
  <tr>
   <td><img src="public/assets/clear.png" width="30px"></td>
-  <td></td>
+  <td>Reset settings</td>
  </tr>
  <tr>
   <td><img src="public/assets/help.png" width="30px"></td>
@@ -33,7 +33,7 @@
  </tr>
  <tr>
   <td><img src="public/assets/dark.png" width="30px"></td>
-  <td></td>
+  <td>Toggle Dark/Light Mode</td>
  </tr>
 </table>
 
