@@ -32,3 +32,7 @@ modeImage.click(()=>{
     App.style(theme[getTheme()])
 })
 
+if(window.innerWidth<700){
+    scene.hide();
+    footer.margin("30px auto")
+}
