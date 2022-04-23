@@ -9,8 +9,8 @@
 
 
 ## Features 
- - [x] Change font and color
- - [x] Local storage o
+ - [x] Change font family & size and color
+ - [x] Local storage 
  - [x] Upload Background 
  - [x] Export Data from Excel File 
  - [x] Orbit and transform control 
