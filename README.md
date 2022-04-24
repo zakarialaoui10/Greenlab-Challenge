@@ -1,7 +1,7 @@
 # Greenlab-Challenge
 ## Preview 
 [Video](video.mp4) 
-[Want To Try!](video.mp4) 
+[Want To Try!](greenlab-challenge.vercel.app) 
 ## Libraries
 - [zikojs](https://github.com/zakarialaoui10/ziko.js) 
 - [threejs](https://threejs.org/) 
