@@ -1,7 +1,6 @@
 # Greenlab-Challenge
 ## Preview 
 
-<video src="video.mp4"></video>
 ## Libraries
 - [zikojs](https://github.com/zakarialaoui10/ziko.js) 
 - [threejs](https://github.com/zakarialaoui10/ziko.js) 
