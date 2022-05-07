@@ -1,6 +1,6 @@
 # Greenlab-Challenge
 ## Preview 
-[Video](video.mp4) 
+[Demo ](https://drive.google.com/file/d/11SMlCCuraowYi7QtERldPtLFl3TP0B9Y/view?usp=sharing) 
 <br>
 [Want To Try!](https://greenlab-challenge.vercel.app/) 
 ## Libraries
