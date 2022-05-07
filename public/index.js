@@ -31,8 +31,15 @@ modeImage.click(()=>{
     logo.updateSrc(theme[getTheme()].logosrc);
     App.style(theme[getTheme()])
 })
-
-if(window.innerWidth<700){
-    scene.hide();
-    footer.margin("30px auto")
+function resize(){
+    if(window.innerWidth<700){
+        scene.hide();
+        footer.margin("30px auto")
+    }
+    else{
+        scene.show();
+        footer.margin("10px auto")
+    }
 }
+App.resizeObserver(resize)
+resize()
