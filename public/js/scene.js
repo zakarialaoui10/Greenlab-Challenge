@@ -2,7 +2,7 @@ Ziko.UI.ExtractAll()
 Ziko.Math.ExtractAll()
 Ziko.THREE.ExtractAll()
 var socket = io();
-console.log(socket)
+
 import {backgroundInput, ExcelHandler, nameText, txt} from "./form.js"
 import {setStyle,getStyle,setPosition,getPosition} from "./db.js"
 import {Galerie,GridPreview} from "./preview.js"
@@ -122,4 +122,5 @@ ExcelHandler.onchange((e)=>handleFileAsync(e).then(()=>{
    emails=[];
 }));
 backgroundInput.onchange(handleImageAsync)
+socket.on('succed',(data)=>console.log("hhhhhhhhhhhhhhhhhhh"))
 export{scene,backgroundImage,resetCamera,saveTransform,toImage}
