@@ -9,6 +9,10 @@
 - [xlsxjs](https://www.npmjs.com/package/xlsx) 
 - [htmltoimage](https://github.com/zakarialaoui10/ziko.js) 
 - [jsPdf](https://github.com/zakarialaoui10/ziko.js) 
+- [express](https://github.com/zakarialaoui10/ziko.js) 
+- [socket.io](https://github.com/zakarialaoui10/ziko.js) 
+- [nodemailer](https://github.com/zakarialaoui10/ziko.js) 
+
 
 
 ## Features 
