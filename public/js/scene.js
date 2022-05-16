@@ -2,7 +2,7 @@ Ziko.UI.ExtractAll()
 Ziko.Math.ExtractAll()
 Ziko.THREE.ExtractAll()
 var socket = io();
-
+console.log(socket)
 import {backgroundInput, ExcelHandler, nameText, txt} from "./form.js"
 import {setStyle,getStyle,setPosition,getPosition} from "./db.js"
 import {Galerie,GridPreview} from "./preview.js"
