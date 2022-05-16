@@ -4,7 +4,7 @@ export var Galerie=Carousel().style({
     margin:"5px auto",
     background:"#eee"
 }).cursor("move").style({padding:"10px",width:"90%"})
-export var GridPreview=Grid().columns(3).spaceAround(1,0).style({
+export var GridPreview=Grid().columns(4).spaceAround(1,0).style({
     width:"80%",
     height:"auto",
     margin:"5px auto",
