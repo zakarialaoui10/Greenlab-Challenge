@@ -9,10 +9,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      //user: process.env.EMAIL,
-      //pass: process.env.PASSWORD,
-      user:"greenlab.attestation.ziko.js@gmail.com",
-      pass:"greenlab1234"
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
     }
   });
 
@@ -47,6 +45,7 @@ io.sockets.on('connection',
               console.log(error);
             } else {
               console.log('Email sent: ' + info.response);
+              socket.emit("succed","hhh")
             }
           });
       }
