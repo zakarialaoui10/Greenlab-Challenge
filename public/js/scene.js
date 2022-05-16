@@ -1,6 +1,8 @@
 Ziko.UI.ExtractAll()
 Ziko.Math.ExtractAll()
 Ziko.THREE.ExtractAll()
+var socket = io();
+
 import {backgroundInput, ExcelHandler, nameText, txt} from "./form.js"
 import {setStyle,getStyle,setPosition,getPosition} from "./db.js"
 import {Galerie,GridPreview} from "./preview.js"
@@ -60,6 +62,8 @@ htmlToImage.toPng(node)
   	var doc = new jspdf.jsPDF('l', 'mm', 'a4');
     doc.addImage(im.src, 'JPEG', 0, 0);
     pdfs[i]=doc;
+    url[i] = "data:application/pdf;base64," + btoa(pdfs[i].output());
+    //console.log(url[i])
     const pdfo = new File([doc.output("blob")],names[i]+".pdf", {
       type: "application/pdf",
   });
@@ -69,7 +73,7 @@ htmlToImage.toPng(node)
   });
 }
 
-var names=[],id=[],save=[]
+var names=[],id=[],save=[],emails=[],url=[]
 async function handleFileAsync(e) {
     const file = e.target.files[0];
     const data = await file.arrayBuffer();
@@ -80,12 +84,24 @@ async function handleFileAsync(e) {
           var arr = rowObject.map(n => Object.values(n));
           id=arange(1,arr.length+1,1);
           save=new Array(arr.length).fill("download");
-          arr.map((n,i)=>names[i]=arr[i][1]);
-          var GridData=matrix([id,names,save]).T.arr;
+          arr.map((n,i)=>{
+            names[i]=arr[i][1];
+            emails[i]=arr[i][3]
+          });
+          var GridData=matrix([id,names,save,emails]).T.arr;
+          var Emails=emails
         	for(let i=0;i<GridData.length;i++){
         		GridData[i][0]=text(GridData[i][0])
         		GridData[i][1]=text(GridData[i][1])          
         		GridData[i][2]=image("./assets/download.png","50px","50px").cursor("pointer").border("none").click(()=>pdfs[i].save(names[i]))
+            GridData[i][3]=text("email").cursor("pointer").border("none").click(()=>{
+              var data=Object.assign({},{
+                data:url[i],
+                email:Emails[i],
+                name:names[i]
+              })
+              socket.emit('email',JSON.stringify(data));   
+            })
         	}
           GridPreview.append(...GridData.flat(1))        
   })
@@ -103,6 +119,7 @@ ExcelHandler.onchange((e)=>handleFileAsync(e).then(()=>{
    save=[];
    pdfs=[];
    images=[];
+   emails=[];
 }));
 backgroundInput.onchange(handleImageAsync)
 export{scene,backgroundImage,resetCamera,saveTransform,toImage}
