@@ -7,7 +7,7 @@
 - [zikojs](https://github.com/zakarialaoui10/ziko.js) 
 - [threejs](https://threejs.org/) 
 - [xlsxjs](https://www.npmjs.com/package/xlsx) 
-- [htmltoimage](https://github.com/zakarialaoui10/ziko.js) 
+- [htmltoimage](https://www.npmjs.com/package/html-to-image) 
 - [jsPdf](https://www.npmjs.com/package/jspdf) 
 - [express](https://expressjs.com/fr/) 
 - [socket.io](https://socket.io/fr/) 
