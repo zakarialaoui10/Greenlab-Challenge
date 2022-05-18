@@ -50,7 +50,10 @@
 To send attestaions via Email we need real-time communication between the client and the server,I use socket.io library to reach this communication ,on the other hand Serverless Functions on Vercel are stateless and have a maximum execution duration.
 As a result, it is not possible to maintain a WebSocket connection to a Serverless Function.
 
-## Want to try localy 
+## Want to try localy
+
+1-Install any code Editor (I Recommand Vs Code)
+2-Install Node.js
 
 ```
 gh repo clone zakarialaoui10/Greenlab-Challenge
