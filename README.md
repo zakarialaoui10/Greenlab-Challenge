@@ -52,8 +52,14 @@ As a result, it is not possible to maintain a WebSocket connection to a Serverle
 
 ## Want to try localy
 
-1-Install any code Editor (I Recommand Vs Code)
-2-Install Node.js
+
+<ol>
+ <li>Install any IDE (I Recommand Vs Code)</li>
+ <li>Install Node.js</li>
+ <li>Clone this repository</li>
+ <li></li>
+</ol>
+
 
 ```
 gh repo clone zakarialaoui10/Greenlab-Challenge
