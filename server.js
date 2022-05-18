@@ -3,8 +3,6 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
-
-console.log(process.env.EMAIL)
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -13,26 +11,23 @@ var transporter = nodemailer.createTransport({
       pass: process.env.PASSWORD
     }
   });
-
-
-  
+var email;
 app.use(express.static('public'));
-
 var io = require('socket.io')(server);
 io.sockets.on('connection',
   function (socket) {
-    //console.log("We have a new client: " + socket.id);
+    console.log("We have a new client: " + socket.id);
     socket.on('email',
       function(data) {
        var data=JSON.parse(data)
-       var email=data.email;
+       email=data.email;
        var name=data.name
        var content=JSON.stringify(data.data).split(",")[1]
        var mailOptions = {
         from: 'greenlab.attestation.ziko.js@gmail.com',
         to: email,
-        subject: 'Greenlab Certificat',
-        text: 'Hi ',
+        subject: 'Greenlab Certificate',
+        html: '<h2>Hello<h2><p>Congratulations </br>You have successfully completed the course </br></p>',
         attachments: [{
           filename: name+".pdf",
           contentType: 'application/pdf',
@@ -44,8 +39,8 @@ io.sockets.on('connection',
             if (error) {
               console.log(error);
             } else {
-              console.log('Email sent: ' + info.response);
-              socket.emit("succed","hhh")
+              console.log('Email sent to : ' + email);
+              socket.emit("succed",'Email sent to : ' + email +" on "+new Date().toDateString()+" at "+new Date().toTimeString())
             }
           });
       }
