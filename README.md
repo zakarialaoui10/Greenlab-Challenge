@@ -52,6 +52,8 @@ As a result, it is not possible to maintain a WebSocket connection to a Serverle
 
 ## Want to try localy 
 
+gh repo clone zakarialaoui10/Greenlab-Challenge
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
