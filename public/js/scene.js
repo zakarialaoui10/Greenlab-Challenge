@@ -2,7 +2,6 @@ Ziko.UI.ExtractAll()
 Ziko.Math.ExtractAll()
 Ziko.THREE.ExtractAll()
 var socket = io();
-
 import {backgroundInput, ExcelHandler, nameText, txt} from "./form.js"
 import {setStyle,getStyle,setPosition,getPosition} from "./db.js"
 import {Galerie,GridPreview} from "./preview.js"
@@ -58,7 +57,7 @@ htmlToImage.toPng(node)
   	var im=new Image()
   	im.src=dataUrl;
   	images[i]=image(im.src).render(true).background("white");
-   Galerie.addTrack(images[i].size("500px","auto"))
+    Galerie.addTrack(images[i].size("500px","auto"));
   	var doc = new jspdf.jsPDF('l', 'mm', 'a4');
     doc.addImage(im.src, 'JPEG', 0, 0);
     pdfs[i]=doc;
@@ -72,7 +71,11 @@ htmlToImage.toPng(node)
     console.error('oops, something went wrong!', error);
   });
 }
-
+Galerie.pointermove(()=>{
+    images.map(n=>{
+      n.intersectRatio(e=>n.scale(e).opacity(e))
+    })
+})
 var names=[],id=[],save=[],emails=[],url=[]
 async function handleFileAsync(e) {
     const file = e.target.files[0];
@@ -94,7 +97,7 @@ async function handleFileAsync(e) {
         		GridData[i][0]=text(GridData[i][0])
         		GridData[i][1]=text(GridData[i][1])          
         		GridData[i][2]=image("./assets/download.png","50px","50px").cursor("pointer").border("none").click(()=>pdfs[i].save(names[i]))
-            GridData[i][3]=text("email").cursor("pointer").border("none").click(()=>{
+            GridData[i][3]=image("./assets/email.png","50px","50px").cursor("pointer").border("none").click(()=>{
               var data=Object.assign({},{
                 data:url[i],
                 email:Emails[i],
@@ -122,5 +125,6 @@ ExcelHandler.onchange((e)=>handleFileAsync(e).then(()=>{
    emails=[];
 }));
 backgroundInput.onchange(handleImageAsync)
-socket.on('succed',(data)=>console.log("hhhhhhhhhhhhhhhhhhh"))
+socket.on('succed',(data)=>alert(data))
+socket.on('fail',(data)=>alert(data))
 export{scene,backgroundImage,resetCamera,saveTransform,toImage}
