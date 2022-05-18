@@ -47,8 +47,9 @@
 </table>
 
 ## Limitations
-Serverless Functions on Vercel are stateless and have a maximum execution duration.
+To send attestaions via Email we need real-time communication between the client and the server,I use socket.io library to reach this communication ,on the other hand Serverless Functions on Vercel are stateless and have a maximum execution duration.
 As a result, it is not possible to maintain a WebSocket connection to a Serverless Function.
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
