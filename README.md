@@ -11,7 +11,7 @@
 - [jsPdf](https://github.com/zakarialaoui10/ziko.js) 
 - [express](https://github.com/zakarialaoui10/ziko.js) 
 - [socket.io](https://github.com/zakarialaoui10/ziko.js) 
-- [nodemailer](https://github.com/zakarialaoui10/ziko.js) 
+- [nodemailer](https://nodemailer.com/about/) 
 
 
 
