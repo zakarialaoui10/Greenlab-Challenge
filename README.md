@@ -8,7 +8,7 @@
 - [threejs](https://threejs.org/) 
 - [xlsxjs](https://www.npmjs.com/package/xlsx) 
 - [htmltoimage](https://github.com/zakarialaoui10/ziko.js) 
-- [jsPdf](https://github.com/zakarialaoui10/ziko.js) 
+- [jsPdf](https://www.npmjs.com/package/jspdf) 
 - [express](https://expressjs.com/fr/) 
 - [socket.io](https://socket.io/fr/) 
 - [nodemailer](https://nodemailer.com/about/) 
