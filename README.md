@@ -14,7 +14,6 @@
 - [nodemailer](https://nodemailer.com/about/) 
 
 
-
 ## Features 
  - [x] Change font family & size and color
  - [X] Toggle Dark/Light Mode
